@@ -58,11 +58,10 @@ Due to Github's limit on files' size, we are unable to upload the original and p
 
 ### 3.2 Setting the database
 
-1. Follow the steps in section 3.1 above \n
-OR \n
-1. Download the folder named **"preparation"** from this repo and download the folder named **"final" inside "preparation"** from Zenodo (link)
-OR \n
-1. Download the folder named **"preparation"** from Zenodo (link)
+1.
+  a. Follow the steps in section 3.1 above
+  b. Download the folder named **"preparation"** from this repo and download the folder named **"final" inside "preparation"** from Zenodo (link)
+  c. Download the folder named **"preparation"** from Zenodo (link)
 2. Execute [**coverage_asn_preparation.py**](https://github.com/sosgang/coverage_asn/blob/main/preparation/coverage_asn_preparation.py): if there is a folder named "final" in "preparation" the script doesn't processes the dumps. It imports the dumps as collections to a MongoDB database and creates the necessary indexes in the collections. If either of these two steps are not of interest to you, comment out either the **importing_dumps_to_db(output_dir)** or the **create_indexes_in_db()** function at the end of the python file.
 
 ## 3. Preparing the data
