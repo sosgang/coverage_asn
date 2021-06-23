@@ -1,4 +1,5 @@
 import datetime
+import execution_scripts
 from execution_scripts.initialize_execution import *
 
 
@@ -13,14 +14,17 @@ def coverage_execution(name_cvs_folder, num_cpus):
     set_searches(cov_dict, num_cpus, cov_years_dict)
     print(datetime.datetime.now())
 
-    print(f'COLLECTING COV BY YEAR___________{datetime.datetime.now()}')
+    print(f'COV BY YEAR___________{datetime.datetime.now()}')
+    sorted_y_dict = sorted(cov_years_dict.items())
+    print(sorted_y_dict)
     with open('cov_years_asn.csv', 'w', encoding='utf-8', newline='') as cov_csv:
         writer = csv.writer(cov_csv)
         writer.writerow(("year", "total",
                          "MAG", "OA", "CR", "combined",
                          "MAG%", "OA%", "CR%", "comb%"))
-
-        for year, info in cov_years_dict.items():
+        for tuple in sorted_y_dict:
+            year = tuple[0]
+            info = tuple[1]
             if info["total"] > 0:
                 mag_perc = info["mag"] / info["total"]
                 oa_perc = info["oa"] / info["total"]
@@ -30,8 +34,8 @@ def coverage_execution(name_cvs_folder, num_cpus):
                 writer.writerow((year, info["total"],
                                  info["mag"], info["oa"], info["cr"], info["comb"],
                                  mag_perc, oa_perc, cr_perc, comb_perc))
-    print(datetime.datetime.now())
 
+    print(f'COV BY CANDIDATE___________{datetime.datetime.now()}')
     with open('coverage_asn.csv', 'w', encoding='utf-8', newline='') as cov_csv:
         writer = csv.writer(cov_csv)
         writer.writerow(("term", "role", "field", "id", "total_cv",

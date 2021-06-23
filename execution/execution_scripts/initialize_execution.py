@@ -1,6 +1,6 @@
 import ray
-from add_meta import *
-from do_searches import *
+from execution_scripts import add_meta
+from execution_scripts.do_searches import *
 
 
 def adding_metadata(cvs_folder_name):

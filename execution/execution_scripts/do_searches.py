@@ -1,5 +1,5 @@
 import ray
-from search_kinds import *
+from execution_scripts.search_kinds import *
 
 
 def remove_stopwords(title):
