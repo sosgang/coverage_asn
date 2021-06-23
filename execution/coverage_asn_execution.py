@@ -16,7 +16,7 @@ def coverage_execution(name_cvs_folder, num_cpus):
     print(f'COLLECTING COV BY YEAR___________{datetime.datetime.now()}')
     with open('cov_years_asn.csv', 'w', encoding='utf-8', newline='') as cov_csv:
         writer = csv.writer(cov_csv)
-        writer.writerow(("year", "total_cv",
+        writer.writerow(("year", "total",
                          "MAG", "OA", "CR", "combined",
                          "MAG%", "OA%", "CR%", "comb%"))
 

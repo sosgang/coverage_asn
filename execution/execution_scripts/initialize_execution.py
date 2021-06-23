@@ -36,7 +36,7 @@ def calculating_coverage(info, cov_y_d):
             cov_y_d[pub['year']] = {'total': 0, 'mag': 0, 'oa': 0, 'cr': 0, 'comb': 0}
         if 'title' in pub.keys() or 'doi' in pub.keys():
             cov['total_cv'] += 1
-            cov_y_d[pub['year']]['total_cv'] += 1
+            cov_y_d[pub['year']]['total'] += 1
             if 'PId' in pub.keys() or 'oa' in pub.keys() or 'cr' in pub.keys():
                 cov['comb'] += 1
                 cov_y_d[pub['year']]['comb'] += 1
