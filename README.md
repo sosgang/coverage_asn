@@ -56,6 +56,8 @@ Due to Github's limit on files' size, we are unable to upload the original and p
 3. Decompress OpenAIRE's dump in a folder named **openaire** inside **preparation**
 4. Decompress Crossref's dump in a folder named **crossref** inside **preparation**
 5. Execute [**coverage_asn_preparation.py**](https://github.com/sosgang/coverage_asn/blob/main/preparation/coverage_asn_preparation.py): this script cleans and processes all the data in the dumps and stores them as separate jsons in a folder named "final" inside "preparation". It also imports the dumps as single collections into a MongoDB database and creates the necessary indexes in the collections. If these two other steps are not of interest to you, comment out the *importing_dumps_to_db(output_dir)* and *create_indexes_in_db()* functions at the end of the python file.
+
+
 Estimated time: _processing one dump takes approximately 4h on our machine_
 
 ### 3.2 Setting the database
@@ -65,6 +67,8 @@ Estimated time: _processing one dump takes approximately 4h on our machine_
   - Download the folder named **"preparation"** from this repo and download the folder named **"final" inside "preparation"** from Zenodo (link)
   - Download the folder named **"preparation"** from Zenodo (link)
 2. Execute [**coverage_asn_preparation.py**](https://github.com/sosgang/coverage_asn/blob/main/preparation/coverage_asn_preparation.py): if there is a folder named "final" in "preparation" the script doesn't processes the dumps (it doesn't execute the function *processing*). It imports the dumps as single collections into a MongoDB database and creates the necessary indexes in the collections. If either of these two steps are not of interest to you, comment out either the *importing_dumps_to_db* or the *create_indexes_in_db* function at the end of the python file.
+
+
 Estimated times:
   - _importing one dump to the database took approximately 1.5h on our machine_
   - _creating a textual index in one collection took from 3 to 4 hours on our machine, ascending/descending indexes take far less_
