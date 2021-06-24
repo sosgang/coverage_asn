@@ -13,7 +13,7 @@ abstract
 
 ## 2. Results
 
-Due to Github's limit on files' size, we are unable to upload the complete results of our study. They are available on Zenodo (link) in the folder **results**.
+Due to Github's limit on files' size, we are unable to upload the complete results of our study. They are available on Zenodo (link) in the folder **"results"**.
 
 - [**coverage_asn.csv**](https://github.com/sosgang/coverage_asn/blob/main/execution/coverage_asn.csv) contains the coverage information calculated for each candidate. Each row corresponds to one candidate. The columns are the following:
   - "term" : term the candidate applied in.
@@ -45,12 +45,14 @@ Due to Github's limit on files' size, we are unable to upload the complete resul
 
 ## 3. Preparing the data
 
-Due to Github's limit on files' size, we are unable to upload the original and processed dumps here. However, we provide download links to the original dumps and instructions to replicate our study. Ready-to-use data and code is available on Zenodo (link) in the folder originals.
+To investigate coverage in our open access datasets of interest, we create a MongoDB database using data from the Microsoft Academic Graph Dump, OpenAIRE Research Graph Dump and Crossref Public Data File. We then query this database with publications' metadata extracted from the candidates' CVs so as to assess whether said publications are present in the datasets of interest.
 
 ### 3.1 Processing MAG's, OA's and CR's Dumps
 
-1. Download the folder **preparation** from this repo
-2. Download all the dumps in a folder named **originals** inside **"preparation"** from the following links:
+Due to Github's limit on files' size, we are unable to upload the processed dumps here. However, we provide download links to the original dumps and instructions to replicate our processing. The processed and ready-to-use dumps is available on Zenodo (link) in the folder **"final"**.
+
+1. Download the folder **"preparation"** from this repo
+2. Download all the dumps in a folder named **"originals"** inside **"preparation"** from the following links:
   - [Microsoft Academic Graph Dump](https://archive.org/details/mag-2020-01-23)
   - [OpenAIRE Research Graph Dump](https://zenodo.org/record/4707307)
   - [Crossref Public Data File](https://academictorrents.com/details/e4287cb7619999709f6e9db5c359dda17e93d515)
@@ -64,7 +66,7 @@ Estimated time: _processing one dump takes approximately 4h on our machine_
 
 ### 3.2 Setting the database
 
-1. Follow the steps in section 3.1 above OR Download the folder named **"preparation"** from this repo and download the folder named **"final" inside "preparation"** from Zenodo (link) OR Download the folder named **"preparation"** from Zenodo (link)
+1. Follow the steps in section 3.1 above OR Download the folder named **"preparation"** from this repo OR Download the folder named **"preparation"** from Zenodo (link)
 2. Execute [**coverage_asn_preparation.py**](https://github.com/sosgang/coverage_asn/blob/main/preparation/coverage_asn_preparation.py): if there is a folder named "final" in "preparation" the script doesn't processes the dumps (it doesn't execute the function *processing*). It imports the dumps as single collections into a MongoDB database and creates the necessary indexes in the collections. If either of these two steps are not of interest to you, comment out either the *importing_dumps_to_db* or the *create_indexes_in_db* function at the end of the python file.
 
 
