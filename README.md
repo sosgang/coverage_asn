@@ -13,6 +13,8 @@ abstract
 
 ## 2. Results
 
+Due to Github's limit on files' size, we are unable to upload the complete results of our study. They are available on Zenodo (link) in the folder **results**.
+
 - [**coverage_asn.csv**](https://github.com/sosgang/coverage_asn/blob/main/execution/coverage_asn.csv) contains the coverage information calculated for each candidate. Each row corresponds to one candidate. The columns are the following:
   - "term" : term the candidate applied in.
   - "role" : role the candidate applied for.
