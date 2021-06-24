@@ -3,7 +3,7 @@ import pymongo
 import os
 
 
-def import_json_to_db(db, coll_name, dumps_dir):
+def import_dump(db, coll_name, dumps_dir):
 
     if "mag" in coll_name:
         coll = db.mag
