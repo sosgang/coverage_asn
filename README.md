@@ -57,7 +57,7 @@ To investigate coverage in our open access datasets of interest, we create a Mon
 
 ### 3.1 Processing MAG's, OA's and CR's Dumps
 
-Due to Github's limit on files' size, we are unable to upload the processed dumps here. However, we provide download links to the original dumps and instructions to replicate our processing. The processed and ready-to-use dumps is available on Zenodo (link) in the folder **"final"**.
+Due to Github's limit on files' size, we are unable to upload the processed versions dumps here. However, we provide download links to the original dumps and instructions to replicate our processing. The processed and ready-to-use dumps is available on Zenodo (link) in the folder **"final"**.
 
 1. Download the folder **"preparation"** from this repo
 2. Download all the dumps in a folder named **"originals"** inside **"preparation"** from the following links:
