@@ -15,7 +15,7 @@ abstract
 
 Due to Github's limit on files' size, we are unable to upload the complete results of our study. They are available on Zenodo (link) in the folder **"results"**.
 
-- [**coverage_asn.csv**](https://github.com/sosgang/coverage_asn/blob/main/execution/coverage_asn.csv) contains the coverage information calculated for each candidate. Each row corresponds to one candidate. The columns are the following:
+- [**cov_asn_xcand.csv**](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xcand.csv) contains the coverage information calculated for each candidate. Each row corresponds to one candidate. The columns are the following:
   - "term" : term the candidate applied in.
   - "role" : role the candidate applied for.
   - "field" : field the candidate applied for.
@@ -25,23 +25,31 @@ Due to Github's limit on files' size, we are unable to upload the complete resul
   - "OA" : raw number of publications from the candidate's CV found in OpenAIRE.
   - "CR" : raw number of publications from the candidate's CV found in CrossRef.
   - "comb" : raw number of publications from the candidate's CV found when the open sources of use are combined.
-  - "MAG% : percentage of the number of publications from the candidate's CV found in Microsoft Academic Graph over the total number of unique publications in the CV.
-  - "OA%" : percentage of the number of publications from the candidate's CV found in OpenAIRE over the total number of unique publications in the CV.
-  - "CR%" : percentage of the number of publications from the candidate's CV found in Crossref over the total number of unique publications in the CV.
-  - "comb%" : percentage of the number of publications from the candidate's CV found over the total number of unique publications in the CV when the open sources of use are combined.
+  - "MAG% : percentage of publications from the candidate's CV found in Microsoft Academic Graph.
+  - "OA%" : percentage of publications from the candidate's CV found in OpenAIRE.
+  - "CR%" : percentage of publications from the candidate's CV found in Crossref.
+  - "comb%" : percentage of publications from the candidate's CV found when MAG, OpenAIRE and Crossref are combined.
 
+- [**cov_asn_xdataset.csv**](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xdataset.csv) contains the coverage information broken down for each dataset. Each row corresponds to percentage of publications found in that dataset for a single candidate. The columns are the following:
+  - "dataset" : dataset of interest.
+  - "term" : term the candidate applied in.
+  - "role" : role the candidate applied for.
+  - "SA" : scientific area the candidate applied for
+  - "field" : field the candidate applied for.
+  - "role&field" : combination of role and field the candidate applied for.
+  - "coverage%" : percentage of publications from the candidate's CV found when MAG, OpenAIRE and Crossref are combined.
 
-- [**cov_years_asn.csv**](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_years_asn.csv) contains the coverage information calculated for each year. Each row corresponds to one year. The columns are the following:
+- [**cov_asn_xyear.csv**](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xyear.csv) contains the coverage information calculated for each year. Each row corresponds to one year. The columns are the following:
   - "year" : year of publication.
   - "total" : total number of unique publications published in that year from all the candidates' CVs.
   - "MAG" : raw number of publications published in that year found in Microsoft Academic Graph.
   - "OA" : raw number of publications published in that year found in OpenAIRE.
   - "CR" : raw number of publications published in that year found in CrossRef.
   - "comb" : raw number of publications published in that year found when the open sources of use are combined.
-  - "MAG% : percentage of the number of publications published in that year found in Microsoft Academic Graph over the total number of publications from that year.
-  - "OA%" : percentage of the number of publications published in that year found in OpenAIRE over the total number of publications from that year.
-  - "CR%" : percentage of the number of publications published in that year found in Crossref over the total number of publications from that year.
-  - "comb%" : percentage of the number of publications published in that year found over the total number of publications from that year.
+  - "MAG% : percentage of the number of publications published in that year found in Microsoft Academic Graph.
+  - "OA%" : percentage of publications published in that year found in OpenAIRE.
+  - "CR%" : percentage of publications published in that year found in Crossref.
+  - "comb%" : percentage of publications published in that year found when MAG, OpenAIRE and Crossref are combined.
 
 ## 3. Preparing the data
 
@@ -83,4 +91,4 @@ Once our MongoDB database is set, we can query it to search for the candidates' 
   - It stores the publications' metadata extracted from the CVs into a json file named "meta_dict.json" in the folder named **"results"** in the folder **"execution"**.
   - It creates a file named "wo_ info.json" in the folder named **results** where it stores information about missing CVs, CVs with no publications, publications incorrectly parsed from PDF, empty publications, and publications missing both title and doi.
   - For each candidate, it stores the publications' data found in the database and the coverage data in a new separate json file in **"results"**. In **"results"**, these new candidates' json files storing coverage data are organized by the term, role, and field they applied for in the 2016-18 NSQ session.
-  - Finally, it stores the essential results into the two csv files in the folder **"execution"**, [coverage_asn.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/coverage_asn.csv) and [cov_years_asn.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_years_asn.csv).
+  - Finally, it stores the essential results into the two csv files in the folder **"execution"**, [cov_asn_xcand.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xcand.csv), [cov_asn_xdataset.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xdataset.csv) and [cov_asn_xyear.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xyear.csv).
