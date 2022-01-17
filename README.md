@@ -22,13 +22,19 @@ Due to Github's limit on files' size, we are unable to upload the complete resul
   - "id" : unique ID of the application.
   - "total_CV" : total number of unique publications from the candidate's CV.
   - "MAG" : raw number of publications from the candidate's CV found in Microsoft Academic Graph.
-  - "OA" : raw number of publications from the candidate's CV found in OpenAIRE.
-  - "CR" : raw number of publications from the candidate's CV found in CrossRef.
-  - "comb" : raw number of publications from the candidate's CV found when the open sources of use are combined.
   - "MAG% : percentage of publications from the candidate's CV found in Microsoft Academic Graph.
+  - "OA" : raw number of publications from the candidate's CV found in OpenAIRE.
   - "OA%" : percentage of publications from the candidate's CV found in OpenAIRE.
-  - "CR%" : percentage of publications from the candidate's CV found in Crossref.
-  - "comb%" : percentage of publications from the candidate's CV found when MAG, OpenAIRE and Crossref are combined.
+  - "CR" : raw number of publications from the candidate's CV found in CrossRef.
+  - "CR%" : percentage of publications from the candidate's CV found in CrossRef.
+  - "MAG+OA" : raw number of publications from the candidate's CV found when Microsoft Academic Graph and OpenAIRE are combined.
+  - "MAG+OA%" : percentage of publications from the candidate's CV found when Microsoft Academic Graph and OpenAIRE are combined.
+  - "MAG+CR" : raw number of publications from the candidate's CV found when Microsoft Academic Graph and CrossRef are combined.
+  - "MAG+CR%" : percentage of the number from the candidate's CV in that year found when Microsoft Academic Graph and CrossRef are combined.
+  - "OA+CR" : raw number of publications from the candidate's CV found when OpenAIRE and CrossRef are combined.
+  - "OA+CR%" : percentage of publications from the candidate's CV found when OpenAIRE and CrossRef are combined.
+  - "Comb" : raw number of publications from the candidate's CV found when MAG, OpenAIRE and CrossRef are combined.
+  - "Comb%" : percentage of publications from the candidate's CV found when MAG, OpenAIRE and CrossRef are combined.
 
 - [**cov_asn_xdataset.csv**](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xdataset.csv) contains the coverage information broken down for each dataset. Each row corresponds to percentage of publications found in that dataset for a single candidate. The columns are the following:
   - "dataset" : dataset of interest.
@@ -37,19 +43,25 @@ Due to Github's limit on files' size, we are unable to upload the complete resul
   - "SA" : scientific area the candidate applied for
   - "field" : field the candidate applied for.
   - "role&field" : combination of role and field the candidate applied for.
-  - "coverage%" : percentage of publications from the candidate's CV found when MAG, OpenAIRE and Crossref are combined.
+  - "coverage%" : percentage of publications from the candidate's CV found in MAG, OpenAIRE, CrossRef, or through the multiple combinations of these sources.
 
 - [**cov_asn_xyear.csv**](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xyear.csv) contains the coverage information calculated for each year. Each row corresponds to one year. The columns are the following:
   - "year" : year of publication.
   - "total" : total number of unique publications published in that year from all the candidates' CVs.
   - "MAG" : raw number of publications published in that year found in Microsoft Academic Graph.
+  - "MAG%" : percentage of the number of publications published in that year found in Microsoft Academic Graph.
   - "OA" : raw number of publications published in that year found in OpenAIRE.
-  - "CR" : raw number of publications published in that year found in CrossRef.
-  - "comb" : raw number of publications published in that year found when the open sources of use are combined.
-  - "MAG% : percentage of the number of publications published in that year found in Microsoft Academic Graph.
   - "OA%" : percentage of publications published in that year found in OpenAIRE.
-  - "CR%" : percentage of publications published in that year found in Crossref.
-  - "comb%" : percentage of publications published in that year found when MAG, OpenAIRE and Crossref are combined.
+  - "CR" : raw number of publications published in that year found in CrossRef.
+  - "CR%" : percentage of publications published in that year found in CrossRef.
+  - "MAG+OA" : raw number of publications published in that year found when Microsoft Academic Graph and OpenAIRE are combined.
+  - "MAG+OA%" : percentage of publications published in that year found when Microsoft Academic Graph and OpenAIRE are combined.
+  - "MAG+CR" : raw number of publications published in that year found when Microsoft Academic Graph and CrossRef are combined.
+  - "MAG+CR%" : percentage of the number of publications published in that year found when Microsoft Academic Graph and CrossRef are combined.
+  - "OA+CR" : raw number of publications published in that year found when OpenAIRE and CrossRef are combined.
+  - "OA+CR%" : percentage of publications published in that year found when OpenAIRE and CrossRef are combined.
+  - "Comb" : raw number of publications published in that year found when MAG, OpenAIRE and CrossRef are combined.
+  - "Comb%" : percentage of publications published in that year found when MAG, OpenAIRE and CrossRef are combined.
 
 ## 3. Preparing the data
 
