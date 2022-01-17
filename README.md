@@ -13,7 +13,7 @@ abstract
 
 ## 2. Results
 
-Due to Github's limit on files' size, we are unable to upload the complete results of our study. They are available on Zenodo (link) in the folder **"results"**.
+Due to Github's limit on files' size, we are unable to upload the complete results of our study. They are available on Zenodo [Zenodo](https://doi.org/10.5281/ZENODO.5025114) in the compressed folder **"execution.tgz"**.
 
 - [**cov_asn_xcand.csv**](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xcand.csv) contains the coverage information calculated for each candidate. Each row corresponds to one candidate. The columns are the following:
   - "term" : term the candidate applied in.
@@ -103,4 +103,4 @@ Once our MongoDB database is set, we can query it to search for the candidates' 
   - In **meta_dict.json**, it stores the publications' metadata extracted from the CVs.
   - In **wo_ info.json**, it stores information about missing CVs, CVs with no publications, publications incorrectly parsed from PDF, empty publications, and publications missing both title and doi.
   - For each candidate, it stores the publications' data found in the database and the coverage data in a new separate json file in **"results"**. There, resulting candidates' json files are organized by the term, role, and field they applied for in the 2016-18 NSQ session.
-  - Finally, it stores the essential results into the two csv files in the folder **"execution"**, [cov_asn_xcand.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xcand.csv), [cov_asn_xdataset.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xdataset.csv) and [cov_asn_xyear.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xyear.csv).
+  - Finally, it stores the essential results into the three csv files in the folder **"execution"**, [cov_asn_xcand.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xcand.csv), [cov_asn_xdataset.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xdataset.csv) and [cov_asn_xyear.csv](https://github.com/sosgang/coverage_asn/blob/main/execution/cov_asn_xyear.csv).
