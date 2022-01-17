@@ -84,7 +84,7 @@ Estimated times:
 
 ## 4. Executing searches to find coverage
 
-Once our MongoDB database is set, we can query it to search for the candidates' publications and assess whether they are present in the different datasets. To set your database follow the steps in section 3 above. Due to Github's limit on files' size, we are unable to upload the folder with all the candidates' CVs from which we estract the publications' metadata to query the database with. However, they are available on Zenodo (link) in the folder **"cand_cvs"**.
+Once our MongoDB database is set, we can query it to search for the candidates' publications and assess whether they are present in the different datasets. To set your database follow the steps in section 3 above. Due to Github's limit on files' size, we are unable to upload the folder with all the candidates' CVs from which we estract the publications' metadata to query the database with. However, they are available on [Zenodo](https://doi.org/10.5281/ZENODO.5025114) in the folder **"cand_cvs"**.
 
 1. Download the folder **"execution"** from this repo
 2. Execute [**coverage_asn_execution.py**](https://github.com/sosgang/coverage_asn/blob/main/execution/coverage_asn_execution.py): this script extracts publications' metadata from each candidate's CV, searches for the publication in the Microsoft Academic Graph, OpenAIRE and Crossref collections of the database and calculates coverage of the candidate's publications by these datasets. Specifically it stores results in several files in the folder named **"results"** in the folder **"execution"**:
